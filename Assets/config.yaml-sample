@@ -1,0 +1,100 @@
+########################################################################
+# IOT Link - Engine Configuration File
+########################################################################
+# See https://gitlab.com/iotlink/iotlink/wikis/Configuration for details
+########################################################################
+mqtt:
+  ########################################################################
+  # Credentials Settings
+  ########################################################################
+  credentials:
+    username: 
+    password: 
+  ########################################################################
+  # TCP Connection Settings
+  ########################################################################
+  tcp:
+    enabled: true
+    hostname: 
+    port: 1883
+    secure: false
+    tlsConfig:
+        allowUntrustedCertificates: false
+        ignoreCertificateChainErrors: false
+        ignoreCertificateRevocationErrors: false
+        caCertificate:
+        clientCertificate:
+        clientCertificatePassword:
+  ########################################################################
+  # WebSocket Connection Settings
+  ########################################################################
+  websocket:
+    enabled: false
+    uri: 
+    secure: false
+    tlsConfig:
+        allowUntrustedCertificates: false
+        ignoreCertificateChainErrors: false
+        ignoreCertificateRevocationErrors: false
+        caCertificate:
+        clientCertificate:
+        clientCertificatePassword:
+  ########################################################################
+  # Message Settings
+  ########################################################################
+  messages:
+    qos: 1
+    retain: false
+  ########################################################################
+  # LWT Message Settings
+  ########################################################################
+  lwt:
+    enabled: true
+    qos: 1
+    retain: true
+    connectMsg: "ON"
+    disconnectMsg: "OFF"
+  ########################################################################
+  # Discovery Settings
+  ########################################################################
+  discovery:
+    enabled: true
+    topicPrefix: homeassistant
+    domainPrefix: false
+  ########################################################################
+  # General MQTT Settings
+  ########################################################################
+  clientId: 
+  prefix: IOTLink
+  globalPrefix: IOTLink/all
+  cleanSession: true
+  autoReconnectDelay: 10
+  keepAlivePeriod: 60
+  maxPendingMessages: 100
+
+########################################################################
+# Logging Configuration
+########################################################################
+logging:
+  enabled: true
+  ########################################################################
+  # Level
+  ########################################################################
+  # Define the level of logging information that will be stored on logs.
+  ########################################################################
+  # 0 (Disabled)
+  # 1 (Critical), 2 (Error), 3 (Warning)
+  # 4 (Info), 5 (Verbose), 6 (Debug)
+  # 7 (Debug Within Loops), 8 (Trace)
+  # 9 (Trace Within Loops), 10 (Data Dumping)
+  ########################################################################
+  # Type: Integer
+  # Default: 4 (Info)
+  ########################################################################
+  level: 4
+
+########################################################################
+# General Addon Configuration
+########################################################################
+addons:
+  enabled: true

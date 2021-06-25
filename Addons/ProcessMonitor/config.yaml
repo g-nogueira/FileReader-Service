@@ -1,0 +1,51 @@
+############################################################################
+# Enabled
+############################################################################
+# This flag indicates whether the module is enabled or disabled.
+############################################################################
+# Type: Boolean
+# Default: false
+############################################################################
+enabled: true
+
+############################################################################
+# Default Formats
+############################################################################
+# Define which formatting will be used by default in all monitors
+############################################################################
+# Sizes: B (Bytes), KB (Kilobytes), GB (Gigabytes), TB (Terabytes)
+#  - You can define rounding with "XX:Y" where Y is the number of decimals.
+#  - Example: "GB:2" will display 2 decimal places
+#
+# Time/Date:
+# - See this link:
+# - https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+############################################################################
+formats:
+  memoryFormat: MB
+  dateTimeFormat: yyyy-MM-dd HH:mm:ss
+  uptimeInSeconds: false
+
+############################################################################
+# Monitors
+############################################################################
+# Configure which processes should be monitored.
+# For minizing file size, each monitor is split in a different file and
+# included here. Uncomment for use, and check file for details.
+############################################################################
+monitors:
+  #AnyDesk: !include apps/AnyDesk.yaml
+  #Chrome: !include apps/Chrome.yaml
+  #Discord: !include apps/Discord.yaml
+  #Firefox: !include apps/Firefox.yaml
+  #OBS: !include apps/OBS.yaml
+  #Origin: !include apps/Origin.yaml
+  #Plex: !include apps/Plex.yaml
+  #Plex: !include apps/Plex-Server.yaml
+  #Rambox: !include apps/Rambox.yaml
+  #Skype: !include apps/Skype.yaml
+  #Steam: !include apps/Steam.yaml
+  #TeamViewer: !include apps/TeamViewer.yaml
+  #VLC: !include apps/VLC.yaml
+  #Zoom: !include apps/Zoom.yaml
+  #Zoom-InMeeting: !include apps/Zoom-InMeeting.yaml

@@ -1,0 +1,100 @@
+############################################################################
+# Enabled
+############################################################################
+# This flag indicates whether the module is enabled or disabled.
+############################################################################
+# Type: Boolean
+# Default: false
+############################################################################
+enabled: true
+
+############################################################################
+# Default Formats
+############################################################################
+# Define which formatting will be used by default in all monitors
+############################################################################
+# Sizes: B (Bytes), KB (Kilobytes), GB (Gigabytes), TB (Terabytes)
+#  - You can define rounding with "XX:Y" where Y is the number of decimals.
+#  - Example: "GB:2" will display 2 decimal places
+#
+# Time/Date:
+# - See this link:
+# - https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+#
+# Important:
+# - You can override default format for each monitor by placing formats
+# - under their configuration. Example:
+#   Memory:
+#    enabled: true
+#    interval: 10
+#    cacheable: true
+#    formats:
+#      memoryFormat: GB:2
+############################################################################
+formats:
+  diskFormat: GB
+  memoryFormat: MB
+  dateFormat: yyyy-MM-dd
+  timeFormat: HH:mm:ss
+  dateTimeFormat: yyyy-MM-dd HH:mm:ss
+
+############################################################################
+# Monitors
+############################################################################
+# Configure which monitors are enabled and which interval they should
+# be pooled from the system. I don't recommend less than 5 seconds.
+# Cacheable monitors don't send the value repeatedly unless it changes.
+############################################################################
+# CPU               : CPU Usage
+# Memory            : Memory (Usage, Available, Used, Total).
+# HardDrive         : Hard Drives (Total Size, Free Space, Format, etc).
+# Power             : Power (Status, Battery Status, Remaning Time, etc).
+# NetworkInfo       : Network Information (IPv4, IPv6, Speed, Wired).
+# SystemInfo        : System Info (Current user physically logged in).
+# IdleTime          : Idle Time (Current user physically logged in).
+# Uptime            : Uptime information (Boot time, Uptime).
+# Display-Info      : Screen Width and Height (Per Display).
+# Display-Screenshot: Screenshot (Per Display) - Recommended > 60 secs.
+############################################################################
+monitors:
+  CPU:
+    enabled: true
+    interval: 10
+    cacheable: true
+  Memory:
+    enabled: true
+    interval: 10
+    cacheable: true
+  HardDrive:
+    enabled: true
+    interval: 10
+    cacheable: true
+  Power:
+    enabled: true
+    interval: 10
+    cacheable: true
+  NetworkInfo:
+    enabled: true
+    interval: 10
+    cacheable: true
+  SystemInfo:
+    enabled: true
+    interval: 10
+    cacheable: true
+  IdleTime:
+    enabled: true
+    interval: 10
+    cacheable: true
+    inSeconds: true
+  Uptime:
+    enabled: true
+    interval: 60
+    cacheable: true
+  Display-Info:
+    enabled: true
+    interval: 60
+    cacheable: true
+  Display-Screenshot:
+    enabled: true
+    interval: 60
+    cacheable: false

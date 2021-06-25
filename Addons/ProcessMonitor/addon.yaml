@@ -1,0 +1,9 @@
+########################################################################
+# Addon Information
+########################################################################
+enabled: true
+id: ProcessMonitor
+name: Process Monitor
+file: ProcessMonitor.dll
+minApiVersion: 2.2.0
+maxApiVersion: 

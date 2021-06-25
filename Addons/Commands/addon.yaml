@@ -1,0 +1,9 @@
+########################################################################
+# Addon Information
+########################################################################
+enabled: true
+id: Commands
+name: System Commands
+file: Commands.dll
+minApiVersion: 2.2.0
+maxApiVersion: 

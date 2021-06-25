@@ -1,0 +1,40 @@
+############################################################################
+# Process Monitor
+############################################################################
+# Define configuration for monitoring a specific process.
+############################################################################
+# processes:          Process names (without .exe) to be monitored.
+# windows:            Process window titles considered. Regex Accepted.
+# classnames:         Process class names considered. Regex Accepted.
+# configs:
+#   enabled:          Enable/Disable.
+#   discoverable:     Enable/Disable HA Auto Discovery.
+#   advancedMode:     Enable HA Auto Discovery for advanced stats (MEM, CPU, etc).
+#   displayName:      Display Name used for HA Auto Discovery.
+#   cacheable:        Enable/Disable caching monitor values.
+#   grouped:          Group similar processes information.
+#     true:    All similar processes information (memory, cpu, etc) grouped.
+#     false:   Consider only the first process found.
+#   interval:         Interval for refreshing this information.
+#   compareType:      Comparison used to match windows and classnames.
+#     0:       Should MATCH ALL windows AND MATCH ALL classnames
+#     1:       Should MATCH ALL windows OR MATCH ALL classnames
+#     2:       Should MATCH ALL windows AND AT LEAST ONE classnames
+#     3:       Should MATCH ALL classnames AND AT LEAST ONE window
+#     4:       Should MATCH AT LEAST ONE window OR AT LEAST ONE classnames
+############################################################################
+
+# Discord
+processes:
+  - Discord
+windows:
+classnames:
+configs:
+  enabled: true
+  discoverable: true
+  advancedMode: false
+  displayName: Discord
+  cacheable: true
+  grouped: true
+  compareType: 0
+  interval: 10
